@@ -24,7 +24,7 @@
     <main>
         <section>
             <div class="formContainer">
-                <form action="#" method="POST" name="currencyForm" class="currencyForm">
+                <form action="#" method="POST" name="currencyForm" class="currencyForm" id="form">
                     <label for="moneyInput" class="moneyInput">Amount</label>
                     <input type="number" id="moneyInput" name="moneyInput" placeholder="Enter amount" step="0.01" min="0.01">
     
@@ -32,16 +32,14 @@
                     <select name="baseInput" id="baseInput">
                         <option value="CAD">CAD</option>
                     </select>
-    
                     
                     <label for="toConvertedInput" class="toConvertedInput">To</label>
                     <select name="toConvertedInput" id="toConvertedInput">
-                        <option value="USD">USD</option>
+                        <!-- <option value=""></option> -->
                     </select>
                 
                     <div class="buttons">
                         <button class="convertButton">Convert</button>
-                        <button class="clearButton">Clear</button>
                     </div>
                 </form>
             </div>
