@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHOW ME THE MONEY!</title>
+    <title>💲HOW ME THE MONEY!</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Kaisei+Opti&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Orbitron&display=swap" rel="stylesheet">
     
     <!-- Linking style sheet -->
     <link rel="stylesheet" href="./styles/style.css">
@@ -22,9 +23,53 @@
 
     <main>
         <section>
-
+            <div class="formContainer">
+                <form action="#" method="POST" name="currencyForm" class="currencyForm">
+                    <label for="moneyInput" class="moneyInput">Amount</label>
+                    <input type="number" id="moneyInput" name="moneyInput" placeholder="Enter amount" step="0.01" min="0.01">
+    
+                    <label for="baseInput" class="baseInput">From</label>
+                    <select name="baseInput" id="baseInput">
+                        <option value="CAD">CAD</option>
+                    </select>
+    
+                    
+                    <label for="toConvertedInput" class="toConvertedInput">To</label>
+                    <select name="toConvertedInput" id="toConvertedInput">
+                        <option value="USD">USD</option>
+                    </select>
+                
+                    <div class="buttons">
+                        <button class="convertButton">Convert</button>
+                        <button class="clearButton">Clear</button>
+                    </div>
+                </form>
+            </div>
         </section>
+
+        <section>
+            <div class="chqContainer">
+                <h2>$how Me the Money!</h2>
+                <p class="date">Date: </p>
+
+                <h3>Amount:</h3>
+                <p class="convertedValue"></p>
+                <img class="flag" src="./assets/cad.png" alt="Canadian flag">
+                <h3>Memo: <span>Thank you for using our app!</span></h3>
+
+                <h3>Signature: <span>Cohort 41</span></h3>
+                
+                <p class="serialNumber"> Serial Number: 001 000 0000 00000 0000 123 4 56 7</p>
+            </div>
+
+            
+        </section>
+
     </main>
+
+    <footer>
+        <p>Created by Karleen & Joey at <a href="www.junocollege.com">Juno College of Technology</a></p>
+    </footer>
     
     <script src="./script.js"></script>
 </body>
