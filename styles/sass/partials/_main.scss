@@ -1,5 +1,76 @@
 // _main.scss
-
-h1 {
-   font-family: $mainFont;
+html {
+    font-size: 125%;
 }
+
+body {
+    background-color: $green;
+}
+
+.dollarSign {
+    display: inline;
+    width: 200px;
+    height: 200px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 80%;
+}
+
+section {
+    border: 10px solid $cream;
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.conversion {
+    margin-bottom: 50px;
+}
+
+input[type=number] {
+    font-family: $bodyFont;
+    font-size: 1.5rem;
+    padding: 10px 5px;
+    width: 30%;
+    border: none;
+    border-bottom: 1.5px solid black;
+    margin-right: 20px;
+}
+
+select {
+    font-family: $bodyFont;
+    font-size: 1.5rem;
+    margin: 5px 15px;
+}
+
+label {
+    margin-left: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 25px;
+    font-family: $bodyFont;
+    font-size: 1.5rem;
+    color: white;
+    background-color: $green;
+    border: 1px solid $green;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 50px 0;
+    display: inline-block;
+}
+
+button:hover, button:focus {
+    background-color: $darkGreen;
+}
+

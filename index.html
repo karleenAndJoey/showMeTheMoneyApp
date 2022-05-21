@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Kaisei+Opti&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- ===== Font Awesome ===== -->
+    <script src="https://kit.fontawesome.com/1686cdb2e3.js" crossorigin="anonymous"></script>
     
     <!-- Linking style sheet -->
     <link rel="stylesheet" href="./styles/style.css">
@@ -18,12 +21,12 @@
 <body>
 
     <header>
-        <h1>$how Me the Money!</h1>
+        <h1><img src="./assets/dollarsign.gif" class="dollarSign">HOW ME THE MONEY!</h1>
     </header>
 
     <main>
-        <section>
-            <div class="formContainer">
+        <section class="conversion">
+            <div class="wrapper">
                 <form action="#" method="POST" name="currencyForm" class="currencyForm" id="form">
                     <label for="moneyInput" class="moneyInput">Amount</label>
                     <input type="number" id="moneyInput" name="moneyInput" placeholder="Enter amount" step="0.01" min="0.01">
@@ -33,9 +36,10 @@
                         <option value="CAD">CAD</option>
                     </select>
                     
+                    <i class="fa-solid fa-arrow-right-long"></i>
+
                     <label for="toConvertedInput" class="toConvertedInput">To</label>
                     <select name="toConvertedInput" id="toConvertedInput">
-                        <!-- <option value=""></option> -->
                     </select>
                 
                     <div class="buttons">
@@ -45,8 +49,8 @@
             </div>
         </section>
 
-        <section>
-            <div class="chqContainer">
+        <section class="cheque">
+            <div class="wrapper">
                 <h2>$how Me the Money!</h2>
                 <h3 class="dateH3"></h3>
                 <p class="date"></p>
@@ -61,7 +65,7 @@
                 <h3>Memo: <span>Thank you for using our app!</span></h3>
                 <h3>Signature: <span>Cohort 41</span></h3>
                 
-                <p class="serialNumber"> Serial Number: 001 000 0000 00000 0000 123 4 56 7</p>
+                <p class="serialNumber"> Serial Number: <span>001 000 0000 00000 0000 123 4 56 7</span></p>
             </div>
 
             

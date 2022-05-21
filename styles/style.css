@@ -237,4 +237,122 @@ html {
 
 h1 {
   font-family: "Cinzel Decorative", cursive;
+  font-size: 3.5rem;
+  letter-spacing: 15px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+h3 {
+  font-family: "Kaisei Opti", serif;
+}
+
+p {
+  font-family: "Kaisei Opti", serif;
+}
+
+span {
+  font-family: "Homemade Apple", cursive;
+}
+
+.serialNumber {
+  font-family: "Kaisei Opti", serif;
+}
+
+.serialNumber span {
+  font-family: "Orbitron", sans-serif;
+}
+
+.moneyInput,
+.baseInput,
+.toConvertedInput {
+  font-family: "Kaisei Opti", serif;
+  font-size: 2rem;
+}
+
+i {
+  font-size: 2rem;
+}
+
+html {
+  font-size: 125%;
+}
+
+body {
+  background-color: #098e09;
+}
+
+.dollarSign {
+  display: inline;
+  width: 200px;
+  height: 200px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 80%;
+}
+
+section {
+  border: 10px solid blanchedalmond;
+  background-color: white;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+.conversion {
+  margin-bottom: 50px;
+}
+
+input[type=number] {
+  font-family: "Kaisei Opti", serif;
+  font-size: 1.5rem;
+  padding: 10px 5px;
+  width: 30%;
+  border: none;
+  border-bottom: 1.5px solid black;
+  margin-right: 20px;
+}
+
+select {
+  font-family: "Kaisei Opti", serif;
+  font-size: 1.5rem;
+  margin: 5px 15px;
+}
+
+label {
+  margin-left: 10px;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button {
+  padding: 10px 25px;
+  font-family: "Kaisei Opti", serif;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #098e09;
+  border: 1px solid #098e09;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 50px 0;
+  display: inline-block;
+}
+
+button:hover, button:focus {
+  background-color: rgb(3, 80, 3);
 }

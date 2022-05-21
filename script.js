@@ -25,18 +25,14 @@ app.getBase = () => {
     fetch(currencyUrl)
         .then((response) => response.json())
         .then((jsonData) => {
-            console.log(jsonData);
             app.displayConvertedInput(jsonData)
         })   
 }
-
-
 
 // Create a construction method that will fetch Currency API data and store them in a variable
 // Store input value in a variable
 app.getUserInput = document.querySelector('#moneyInput')
 let userInput = app.getUserInput
-
 
 // Create an object that will later store a value that we can access
 let apiData = {};
@@ -46,8 +42,6 @@ app.displayConvertedInput = (dataFromApi) => {
     // To get the array of country codes
     apiData = dataFromApi.rates
     const rates = Object.keys(apiData)
-
-    console.log(rates);
 
     const convertedDropDown = document.querySelector('#toConvertedInput')
 
@@ -96,14 +90,12 @@ app.displayConvertedInput = (dataFromApi) => {
         // Append the current date to the page
         // Date object
         const date = new Date();
-        console.log(date)
 
         const dateH3 = document.querySelector('.dateH3');
         const dateInput = document.querySelector('.date');
         dateInput.innerHTML = 
         `Date:  ${date.getMonth()}-${date.getDate()}-${date.getFullYear()}   
         Time: ${date.getHours()}:${date.getMinutes()} EST`;
-
 
         dateH3.append(dateInput);
         

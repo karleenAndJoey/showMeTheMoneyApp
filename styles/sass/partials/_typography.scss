@@ -1,2 +1,46 @@
 // _typography.scss
 
+h1 {
+    font-family: $mainFont;
+    font-size: 3.5rem;
+    letter-spacing: 15px;
+    text-align: center;
+}
+
+h2 {
+    font-family: $mainFont;
+}
+
+h3 {
+    font-family: $bodyFont;
+}
+
+p {
+    font-family: $bodyFont;
+}
+
+span {
+    font-family: $handwrittenFont;
+}
+
+.serialNumber {
+    font-family: $bodyFont;
+}
+
+.serialNumber span {
+    font-family: $serialFont;
+}
+
+.moneyInput,
+.baseInput,
+.toConvertedInput{
+    font-family: $bodyFont;
+    font-size: 2rem;
+}
+
+i {
+    font-size: 2rem;
+}
+
+
+
