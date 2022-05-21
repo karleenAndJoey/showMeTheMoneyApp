@@ -79,7 +79,7 @@ app.displayConvertedInput = (dataFromApi) => {
         // Append the converted total amount to the page
         const amount = document.querySelector('.amount');
         const convertedValue = document.querySelector('.convertedValue');
-        convertedValue.innerHTML = `${total} ${getConvertedValue.value}`;
+        convertedValue.innerHTML = ` ${total} ${getConvertedValue.value} `;
         amount.append(convertedValue);
         
 
@@ -90,24 +90,25 @@ app.displayConvertedInput = (dataFromApi) => {
         // Append the current date to the page
         // Date object
         const date = new Date();
+        console.log(date);
+
 
         const dateH3 = document.querySelector('.dateH3');
         const dateInput = document.querySelector('.date');
         dateInput.innerHTML = 
-        `Date:  ${date.getMonth()}-${date.getDate()}-${date.getFullYear()}   
+        `Date:  ${date.getMonth()}-${date.getDate()}-${date.getFullYear()}
+        <br>
         Time: ${date.getHours()}:${date.getMinutes()} EST`;
 
         dateH3.append(dateInput);
         
         // To clear the input field once submitted
         userInput.value = "";
-
     })
 
 
 app.init = () => {
     app.getBase()
-
 };
 
 app.init();

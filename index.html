@@ -31,16 +31,26 @@
                     <label for="moneyInput" class="moneyInput">Amount</label>
                     <input type="number" id="moneyInput" name="moneyInput" placeholder="Enter amount" step="0.01" min="0.01">
     
-                    <label for="baseInput" class="baseInput">From</label>
-                    <select name="baseInput" id="baseInput">
-                        <option value="CAD">CAD</option>
-                    </select>
-                    
-                    <i class="fa-solid fa-arrow-right-long"></i>
+                    <br>
 
-                    <label for="toConvertedInput" class="toConvertedInput">To</label>
-                    <select name="toConvertedInput" id="toConvertedInput">
-                    </select>
+                    <div class="toAndFrom">
+                        <div class="to">
+                            <label for="baseInput" class="baseInput">From </label>
+                            <img src="./assets/cad.png" class="cdnFlag" alt="Canadian flag">
+                            <select name="baseInput" id="baseInput">
+                                <option value="CAD">CAD</option>
+                            </select>
+                        </div>
+                        
+                        <div class="from">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+        
+    
+                            <label for="toConvertedInput" class="toConvertedInput">To</label>
+                            <select name="toConvertedInput" id="toConvertedInput">
+                            </select>
+                        </div>
+                    </div>
                 
                     <div class="buttons">
                         <button class="convertButton">Convert</button>
@@ -50,31 +60,35 @@
         </section>
 
         <section class="cheque">
-            <div class="wrapper">
-                <h2>$how Me the Money!</h2>
+            <div class="topOfChq">
+                <h2>SHOW ME THE<br> MONEY! 💰</h2>
                 <h3 class="dateH3"></h3>
                 <p class="date"></p>
+            </div>
 
+            <div class="midOfChq">
+                <img src="./assets/cad.png" alt="Canadian flag">
                 <h3 class="cadH3"></h3>
                 <p class="cadAmount"></p>
 
                 <h3 class="amount"></h3>
                 <p class="convertedValue"></p>
                 <img class="flag" src="./assets/cad.png" alt="Canadian flag">
-
-                <h3>Memo: <span>Thank you for using our app!</span></h3>
-                <h3>Signature: <span>Cohort 41</span></h3>
-                
-                <p class="serialNumber"> Serial Number: <span>001 000 0000 00000 0000 123 4 56 7</span></p>
             </div>
 
+            <div class="bottomOfChq">
+                <h3>Memo: <span>Thank you for using our app!</span></h3>
+                <h3>Signature: <span>Cohort 41</span></h3>
+            </div>
             
+            <p class="serialNumber"> Serial Number: <span>001|| 000 0008 |00003 ||0007 123 4 |8</span></p>
+
         </section>
 
     </main>
 
     <footer>
-        <p>Created by Karleen & Joey at <a href="www.junocollege.com">Juno College of Technology</a></p>
+        <p>Created by Karleen & Joey at <a href="www.junocollege.com">Juno College of Technology</a> 💰</p>
     </footer>
     
     <script src="./script.js"></script>
