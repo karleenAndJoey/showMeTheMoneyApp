@@ -72,7 +72,7 @@ app.displayConvertedInput = (dataFromApi) => {
         // const cadAmount = document.querySelector('.cadAmount');
         const cadAmount = document.querySelector('.cadAmount');
         // const cadP = document.querySelector('p');
-        cadAmount.innerHTML = ` 💲${userInput.value} CAD Dollars =`;
+        cadAmount.innerHTML = ` $${userInput.value} CAD =`;
         cadH3.append(cadAmount);
         
         

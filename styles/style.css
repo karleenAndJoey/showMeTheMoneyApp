@@ -285,7 +285,7 @@ span {
 .baseInput,
 .toConvertedInput {
   font-family: "Kaisei Opti", serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 i {
@@ -298,8 +298,8 @@ html {
 
 body {
   background-color: #098e09;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(80, 177, 119, 0.812)), to(#098e09));
-  background-image: linear-gradient(180deg, rgba(80, 177, 119, 0.812), #098e09);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 187, 99, 0.995)), to(#098e09));
+  background-image: linear-gradient(180deg, rgba(41, 187, 99, 0.995), #098e09);
 }
 
 .dollarSign {
@@ -332,12 +332,11 @@ body {
 }
 
 section {
-  border: 10px solid blanchedalmond;
+  border: 6px solid rgb(3, 80, 3);
   background-color: white;
-  width: 75%;
+  width: 68%;
   margin: 0 auto;
-  padding: 20px 30px;
-  border-radius: 90px;
+  border-radius: 60px;
 }
 
 .conversion {
@@ -347,7 +346,7 @@ section {
 
 input[type=number] {
   font-family: "Kaisei Opti", serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 10px 5px;
   width: 40%;
   border: none;
@@ -405,8 +404,9 @@ button:hover, button:focus {
 }
 
 .cheque {
+  padding: 20px 25px;
   border-radius: 0;
-  border: 5px solid white;
+  border: 5px solid rgb(3, 80, 3);
   background-image: -webkit-gradient(linear, left top, left bottom, from(blanchedalmond), to(white));
   background-image: linear-gradient(180deg, blanchedalmond, white);
 }
@@ -458,7 +458,9 @@ button:hover, button:focus {
 footer {
   text-align: center;
   color: blanchedalmond;
-  margin-top: 50px;
+  margin-top: 80px;
+  padding: 3px;
+  background-color: rgb(3, 80, 3);
 }
 footer p {
   font-size: 0.75rem;
