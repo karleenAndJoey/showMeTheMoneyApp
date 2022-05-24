@@ -19,7 +19,7 @@ app.endpoint = `https://morning-coast-00478.herokuapp.com/https://www.currency-a
 app.getBase = () => {
     const currencyUrl = new URL(app.endpoint);
     currencyUrl.search = new URLSearchParams({
-        base: 'CAD'
+        base: 'CAD' 
     });
     // Get data
     fetch(currencyUrl)
@@ -33,6 +33,11 @@ app.getBase = () => {
 // Store input value in a variable
 app.getUserInput = document.querySelector('#moneyInput')
 let userInput = app.getUserInput
+
+app.errorMsg = function () {
+    if (!userInput.value) {
+    alert('Please enter a numerical value');
+}}
 
 // Create an object that will later store a value that we can access
 let apiData = {};
@@ -53,25 +58,24 @@ app.displayConvertedInput = (dataFromApi) => {
     })
 }
 
+app.setupEventListeners = function () {
     // Query our convert button
     const convert = document.querySelector('.convertButton')
-
+    
     // When user clicks the convert button, we attached an event listener to it and a function that will multiply userinput and convertedRate
     convert.addEventListener('click', function (e) {
         e.preventDefault();
         
         const getConvertedValue = document.querySelector('#toConvertedInput')
-
+    
         let convertedRate = apiData[getConvertedValue.value]
-
+    
         let total = (userInput.value * convertedRate).toFixed(2);
         
         
         // Append the user input amount to the page
         const cadH3 = document.querySelector('.cadH3');
-        // const cadAmount = document.querySelector('.cadAmount');
         const cadAmount = document.querySelector('.cadAmount');
-        // const cadP = document.querySelector('p');
         cadAmount.innerHTML = ` $${userInput.value} CAD =`;
         cadH3.append(cadAmount);
         
@@ -82,33 +86,47 @@ app.displayConvertedInput = (dataFromApi) => {
         convertedValue.innerHTML = ` ${total} ${getConvertedValue.value} `;
         amount.append(convertedValue);
         
-
+    
         // Append the selected currency flag to the page
         const flagImage = document.querySelector('.flag');
         flagImage.src = `./assets/${getConvertedValue.value}.png`;
-
+    
         // Append the current date to the page
         // Date object
         const date = new Date();
-        console.log(date);
-
-
+    
+    
+        // FIGURE OUT HOW TO APPEND CORRECT MINUTES TO PAGE/HOW TO CONNECT IT TO OUR TEMPLATE LITERALS
+        // let minutes = function () {
+        //     if (date.getMinutes() < 10 ) {
+        //         minutes = '0' + date.getMinutes();
+        //     }else {
+        //         minutes = date.getMinutes();
+        //     } 
+        // }
+    
         const dateH3 = document.querySelector('.dateH3');
         const dateInput = document.querySelector('.date');
         dateInput.innerHTML = 
         `Date:  ${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}
         <br>
-        Time: ${date.getHours()}:${date.getMinutes()} EST`;
-
+        Time: ${date.getHours()}:${date.getMinutes()}`;
+    
         dateH3.append(dateInput);
+    
+        // Call the function that will alert user if they enter anything but a number
+        app.errorMsg();
         
         // To clear the input field once submitted
         userInput.value = "";
     })
+}
+
 
 
 app.init = () => {
-    app.getBase()
+    app.getBase();
+    app.setupEventListeners();
 };
 
 app.init();

@@ -449,6 +449,7 @@ button:hover, button:focus {
 }
 .bottomOfChq span {
   border-bottom: 1px solid black;
+  line-height: 50px;
 }
 
 .serialNumber {
@@ -489,7 +490,7 @@ footer a {
     font-size: 0.9rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 686px) {
   .toAndFrom {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -501,12 +502,27 @@ footer a {
   }
 }
 @media (max-width: 480px) {
+  h1 {
+    font-size: 2.9rem;
+  }
+
+  .currencyForm {
+    margin-top: 30px;
+  }
+
   input[type=number] {
     width: 85%;
   }
 
-  .bottomOfChq span {
-    line-height: 50px;
+  .topOfChq {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
   }
 
   .midOfChq {
