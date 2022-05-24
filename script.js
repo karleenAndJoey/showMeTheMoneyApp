@@ -96,21 +96,21 @@ app.setupEventListeners = function () {
         const date = new Date();
     
     
-        // FIGURE OUT HOW TO APPEND CORRECT MINUTES TO PAGE/HOW TO CONNECT IT TO OUR TEMPLATE LITERALS
-        // let minutes = function () {
-        //     if (date.getMinutes() < 10 ) {
-        //         minutes = '0' + date.getMinutes();
-        //     }else {
-        //         minutes = date.getMinutes();
-        //     } 
-        // }
-    
+        // a function to fix how the minutes append to the page
+        let minutes = function () {
+            if (date.getMinutes() < 10) {
+                return minutes = '0' + date.getMinutes();
+            } else {
+                return minutes = date.getMinutes();
+            }
+        }
+
         const dateH3 = document.querySelector('.dateH3');
         const dateInput = document.querySelector('.date');
-        dateInput.innerHTML = 
-        `Date:  ${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}
+        dateInput.innerHTML =
+        `Date:  ${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}
         <br>
-        Time: ${date.getHours()}:${date.getMinutes()}`;
+        Time: ${date.getHours()}:${minutes()}`;
     
         dateH3.append(dateInput);
     
