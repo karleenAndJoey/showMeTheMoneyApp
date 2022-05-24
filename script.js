@@ -16,17 +16,19 @@ const app = {};
 // Initialize preset data in the dedicated properties
 app.endpoint = `https://morning-coast-00478.herokuapp.com/https://www.currency-api.com/rates`;
 
-app.getBase = () => {
+app.getBase = (query) => {
     const currencyUrl = new URL(app.endpoint);
-    currencyUrl.search = new URLSearchParams({
-        base: 'CAD' 
-    });
     // Get data
+    currencyUrl.search = new URLSearchParams({
+        base: query
+    });
+
     fetch(currencyUrl)
         .then((response) => response.json())
         .then((jsonData) => {
-            app.displayConvertedInput(jsonData)
-        })   
+            app.displayConvertedInput(jsonData);
+            app.displayFromInput(jsonData);
+        });   
 }
 
 // Create a construction method that will fetch Currency API data and store them in a variable
@@ -41,6 +43,22 @@ app.errorMsg = function () {
 
 // Create an object that will later store a value that we can access
 let apiData = {};
+
+// This will append the data into our "from" dropdown
+app.displayFromInput = (dataFromApi) => {
+    // To get the array of country codes
+    apiData = dataFromApi.rates
+    const rates = Object.keys(apiData)
+
+    const fromDropdown = document.querySelector('#baseInput')
+
+    rates.forEach((individualRate) => {
+        const options = document.createElement('option')
+        options.value = individualRate
+        options.innerHTML = individualRate
+        fromDropdown.appendChild(options)
+    })
+}
 
 // This will append the data into our "to" dropdown
 app.displayConvertedInput = (dataFromApi) => {
@@ -57,7 +75,6 @@ app.displayConvertedInput = (dataFromApi) => {
         convertedDropDown.appendChild(options)
     })
 }
-
 app.setupEventListeners = function () {
     // Query our convert button
     const convert = document.querySelector('.convertButton')
@@ -67,9 +84,15 @@ app.setupEventListeners = function () {
         e.preventDefault();
         
         const getConvertedValue = document.querySelector('#toConvertedInput')
-    
         let convertedRate = apiData[getConvertedValue.value]
-    
+
+        const getBaseValue = document.querySelector('#baseInput')
+        let baseRate = apiData[getBaseValue.value]
+        
+
+
+        console.log(baseRate);
+
         let total = (userInput.value * convertedRate).toFixed(2);
         
         
@@ -96,21 +119,21 @@ app.setupEventListeners = function () {
         const date = new Date();
     
     
-        // FIGURE OUT HOW TO APPEND CORRECT MINUTES TO PAGE/HOW TO CONNECT IT TO OUR TEMPLATE LITERALS
-        // let minutes = function () {
-        //     if (date.getMinutes() < 10 ) {
-        //         minutes = '0' + date.getMinutes();
-        //     }else {
-        //         minutes = date.getMinutes();
-        //     } 
-        // }
+        // a function to fix how the minutes append to the page
+        let minutes = function () {
+            if (date.getMinutes() < 10 ) {
+                return minutes = '0' + date.getMinutes();
+            } else {
+                return minutes = date.getMinutes();
+            } 
+        }
     
         const dateH3 = document.querySelector('.dateH3');
         const dateInput = document.querySelector('.date');
         dateInput.innerHTML = 
         `Date:  ${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}
         <br>
-        Time: ${date.getHours()}:${date.getMinutes()}`;
+        Time: ${date.getHours()}:${minutes()}`;
     
         dateH3.append(dateInput);
     
