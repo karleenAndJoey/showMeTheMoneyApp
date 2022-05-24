@@ -96,7 +96,7 @@ app.displayConvertedInput = (dataFromApi) => {
         const dateH3 = document.querySelector('.dateH3');
         const dateInput = document.querySelector('.date');
         dateInput.innerHTML = 
-        `Date:  ${date.getMonth()}-${date.getDate()}-${date.getFullYear()}
+        `Date:  ${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}
         <br>
         Time: ${date.getHours()}:${date.getMinutes()} EST`;
 
