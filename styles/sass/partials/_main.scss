@@ -26,9 +26,11 @@ body {
     align-items: center;
 }
 
-.to {
-    position: relative;
-    bottom: -14px;
+
+i {
+    margin: 20px 10px;
+    color: $darkGreen;
+
 }
 
 section {
@@ -58,6 +60,7 @@ select {
     font-family: $bodyFont;
     font-size: 1.25rem;
     margin: 5px 15px;
+    padding: 0 10px;
 }
 
 select:hover {
@@ -93,27 +96,41 @@ button:hover, button:focus {
     color: $cream;
 }
 
-.cdnFlag {
-    position: relative;
-    bottom: -22px;
-}
-
 .cheque {
     padding: 20px 25px;
     border-radius: 0;
     border: 5px solid $darkGreen; 
-    background-image: linear-gradient(180deg, $cream, white);
+    background-image: linear-gradient(180deg, $darkCream, $cream, white);
 }
 
 .topOfChq {
     display: flex;
     justify-content: space-between;
+    .dateH3, .date {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    h2{
+        letter-spacing: 2px;
+    }
 }
 
 .midOfChq {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    h3 {
+        letter-spacing: 2px;
+    }
+    p {
+        letter-spacing: 1px;
+    }
+    .payTo {
+        margin-right: 25px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
 }
 
 .amount {
@@ -124,15 +141,21 @@ button:hover, button:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
     span {
         border-bottom: 1px solid black;
         line-height: 50px;
+        text-transform: none;
     }
 }
 
 .serialNumber {
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-top: 50px;
-    
 }
 
 footer {

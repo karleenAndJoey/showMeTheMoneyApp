@@ -246,6 +246,7 @@ h1 {
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
   margin-bottom: 60px;
   text-shadow: 2px 2px blanchedalmond;
+  color: rgb(3, 80, 3);
 }
 
 h1:hover {
@@ -326,9 +327,9 @@ body {
           align-items: center;
 }
 
-.to {
-  position: relative;
-  bottom: -14px;
+i {
+  margin: 20px 10px;
+  color: rgb(3, 80, 3);
 }
 
 section {
@@ -358,6 +359,7 @@ select {
   font-family: "Kaisei Opti", serif;
   font-size: 1.25rem;
   margin: 5px 15px;
+  padding: 0 10px;
 }
 
 select:hover {
@@ -398,17 +400,12 @@ button:hover, button:focus {
   color: blanchedalmond;
 }
 
-.cdnFlag {
-  position: relative;
-  bottom: -22px;
-}
-
 .cheque {
   padding: 20px 25px;
   border-radius: 0;
   border: 5px solid rgb(3, 80, 3);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(blanchedalmond), to(white));
-  background-image: linear-gradient(180deg, blanchedalmond, white);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(241, 215, 177)), color-stop(blanchedalmond), to(white));
+  background-image: linear-gradient(180deg, rgb(241, 215, 177), blanchedalmond, white);
 }
 
 .topOfChq {
@@ -418,6 +415,14 @@ button:hover, button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.topOfChq .dateH3, .topOfChq .date {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.topOfChq h2 {
+  letter-spacing: 2px;
 }
 
 .midOfChq {
@@ -430,6 +435,17 @@ button:hover, button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.midOfChq h3 {
+  letter-spacing: 2px;
+}
+.midOfChq p {
+  letter-spacing: 1px;
+}
+.midOfChq .payTo {
+  margin-right: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .amount {
@@ -447,12 +463,19 @@ button:hover, button:focus {
       -ms-flex-align: center;
           align-items: center;
 }
+.bottomOfChq h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 .bottomOfChq span {
   border-bottom: 1px solid black;
   line-height: 50px;
+  text-transform: none;
 }
 
 .serialNumber {
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-top: 50px;
 }
 
@@ -491,6 +514,10 @@ footer a {
   }
 }
 @media (max-width: 686px) {
+  .currencyForm {
+    margin-top: 30px;
+  }
+
   .toAndFrom {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -500,14 +527,31 @@ footer a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
+  .midOfChq {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .midOfChq .payTo {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .midOfChq h3 {
+    margin: 0 0;
+  }
+
+  input[type=number] {
+    font-size: 0.75rem;
+  }
 }
 @media (max-width: 480px) {
   h1 {
     font-size: 2.9rem;
-  }
-
-  .currencyForm {
-    margin-top: 30px;
   }
 
   input[type=number] {
