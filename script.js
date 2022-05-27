@@ -90,6 +90,7 @@ app.displayConvertedInput = (dataFromApi) => {
 
 // EVENT LISTENER
 app.setupEventListeners = function () {
+
    // Query our convert button
    const convert = document.querySelector(".convertButton");
 
@@ -184,6 +185,7 @@ app.setupEventListeners = function () {
       getSecondBase();
    });
 };
+
 
 app.init = () => {
    app.getBase();
