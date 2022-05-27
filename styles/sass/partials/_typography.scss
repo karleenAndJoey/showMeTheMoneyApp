@@ -1,58 +1,55 @@
 // _typography.scss
 
 h1 {
-    font-family: $mainFont;
-    font-size: 3.10rem;
-    letter-spacing: 15px;
-    text-align: center;
-    transition: transform 0.6s ease-in-out;
-    margin-bottom: 60px;
-    text-shadow: 2px 2px $cream;
-    color: $darkGreen;
+   font-family: $mainFont;
+   font-size: 3.5rem;
+   letter-spacing: 15px;
+   text-align: center;
+   transition: transform 0.6s ease-in-out;
+   margin-bottom: 70px;
+   text-shadow: 2px 2px black;
+   color: white;
 }
 
 h1:hover {
-    transform: rotate(-2.25deg);
+   transform: rotate(-3deg);
 }
 
 h2 {
-    font-family: $mainFont;
+   font-family: $mainFont;
 }
 
 h3 {
-    font-family: $bodyFont;
-    font-size: 0.9rem;
+   font-family: $bodyFont;
+   font-size: 1rem;
 }
 
 p {
-    font-family: $bodyFont;
-    font-size: 1.2rem;
+   font-family: $bodyFont;
+   font-size: 1.1rem;
 }
 
 span {
-    font-family: $handwrittenFont;
-    font-size: 1.2rem;
+   font-family: $handwrittenFont;
+   font-size: 1rem;
 }
 
 .serialNumber {
-    font-family: $bodyFont;
-    font-size: 0.9rem;
+   font-family: $bodyFont;
+   font-size: 0.9rem;
 }
 
 .serialNumber span {
-    font-family: $serialFont;
+   font-family: $serialFont;
 }
 
 .moneyInput,
 .baseInput,
-.toConvertedInput{
-    font-family: $bodyFont;
-    font-size: 1.2rem;
+.toConvertedInput {
+   font-family: $bodyFont;
+   font-size: 1.1rem;
 }
 
 i {
-    font-size: 1.5rem;
+   font-size: 1.5rem;
 }
-
-
-

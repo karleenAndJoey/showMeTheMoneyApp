@@ -237,21 +237,21 @@ html {
 
 h1 {
   font-family: "Cinzel Decorative", cursive;
-  font-size: 3.1rem;
+  font-size: 3.5rem;
   letter-spacing: 15px;
   text-align: center;
   -webkit-transition: -webkit-transform 0.6s ease-in-out;
   transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
-  margin-bottom: 60px;
-  text-shadow: 2px 2px blanchedalmond;
-  color: rgb(3, 80, 3);
+  margin-bottom: 70px;
+  text-shadow: 2px 2px black;
+  color: white;
 }
 
 h1:hover {
-  -webkit-transform: rotate(-2.25deg);
-          transform: rotate(-2.25deg);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
 }
 
 h2 {
@@ -260,17 +260,17 @@ h2 {
 
 h3 {
   font-family: "Kaisei Opti", serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 p {
   font-family: "Kaisei Opti", serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 span {
   font-family: "Homemade Apple", cursive;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .serialNumber {
@@ -286,7 +286,7 @@ span {
 .baseInput,
 .toConvertedInput {
   font-family: "Kaisei Opti", serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 i {
@@ -298,15 +298,16 @@ html {
 }
 
 body {
-  background-color: #098e09;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 187, 99, 0.995)), to(#098e09));
-  background-image: linear-gradient(180deg, rgba(41, 187, 99, 0.995), #098e09);
+  background-color: rgba(171, 214, 153, 0.8784313725);
+  background-image: -webkit-gradient(linear, right bottom, left top, from(rgba(171, 214, 153, 0.8784313725)), color-stop(#4fb286), to(#3c896d));
+  background-image: linear-gradient(to top left, rgba(171, 214, 153, 0.8784313725), #4fb286, #3c896d);
 }
 
 .dollarSign {
   display: inline;
-  width: 120px;
-  height: 100px;
+  width: 88px;
+  height: 140px;
+  margin-right: 15px;
 }
 
 .wrapper {
@@ -329,11 +330,11 @@ body {
 
 i {
   margin: 20px 10px;
-  color: rgb(3, 80, 3);
+  color: #3c896d;
 }
 
 section {
-  border: 6px solid rgb(3, 80, 3);
+  border: 4px solid #3c896d;
   background-color: white;
   width: 68%;
   margin: 0 auto;
@@ -385,9 +386,9 @@ button {
   font-size: 1.45rem;
   letter-spacing: 3px;
   color: white;
-  background-color: #098e09;
-  border: 2px solid blanchedalmond;
-  border-radius: 15px;
+  background-color: #3c896d;
+  border: 1px solid #4fb286;
+  border-radius: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
@@ -395,17 +396,19 @@ button {
   display: inline-block;
 }
 
-button:hover, button:focus {
-  background-color: rgb(3, 80, 3);
-  color: blanchedalmond;
+button:hover,
+button:focus {
+  background-color: #4fb286;
+  border: 1px solid #4fb286;
+  color: white;
 }
 
 .cheque {
-  padding: 20px 25px;
-  border-radius: 0;
-  border: 5px solid rgb(3, 80, 3);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(241, 215, 177)), color-stop(blanchedalmond), to(white));
-  background-image: linear-gradient(180deg, rgb(241, 215, 177), blanchedalmond, white);
+  padding: 20px 40px;
+  border-radius: 5px;
+  border: 3px solid black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(247, 221, 182)), color-stop(blanchedalmond), to(white));
+  background-image: linear-gradient(180deg, rgb(247, 221, 182), blanchedalmond, white);
 }
 
 .topOfChq {
@@ -416,7 +419,8 @@ button:hover, button:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.topOfChq .dateH3, .topOfChq .date {
+.topOfChq .dateH3,
+.topOfChq .date {
   text-transform: uppercase;
   font-size: 1.1rem;
   letter-spacing: 1px;
@@ -435,6 +439,7 @@ button:hover, button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 20px;
 }
 .midOfChq h3 {
   letter-spacing: 2px;
@@ -471,27 +476,31 @@ button:hover, button:focus {
   border-bottom: 1px solid black;
   line-height: 50px;
   text-transform: none;
+  color: rgba(0, 0, 0, 0.734);
 }
 
 .serialNumber {
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+.serialNumber span {
+  letter-spacing: 3px;
 }
 
 footer {
   text-align: center;
-  color: blanchedalmond;
-  margin-top: 80px;
-  padding: 3px;
-  background-color: rgb(3, 80, 3);
+  color: white;
+  margin-top: 100px;
+  padding: 2px;
+  background-color: #3c896d;
 }
 footer p {
   font-size: 0.75rem;
 }
 footer a {
   text-decoration: none;
-  color: blanchedalmond;
+  color: white;
 }
 
 @media (max-width: 940px) {
@@ -513,7 +522,7 @@ footer a {
     font-size: 0.9rem;
   }
 }
-@media (max-width: 686px) {
+@media (max-width: 730px) {
   .currencyForm {
     margin-top: 30px;
   }
@@ -526,6 +535,17 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .topOfChq {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
   }
 
   .midOfChq {
@@ -542,7 +562,7 @@ footer a {
         align-self: flex-start;
   }
   .midOfChq h3 {
-    margin: 0 0;
+    margin: 0;
   }
 
   input[type=number] {
@@ -556,17 +576,6 @@ footer a {
 
   input[type=number] {
     width: 85%;
-  }
-
-  .topOfChq {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
   }
 
   .midOfChq {
@@ -588,7 +597,9 @@ footer a {
     font-size: 0.8rem;
   }
 
-  .baseInput, .toConvertedInput, .moneyInput {
+  .baseInput,
+.toConvertedInput,
+.moneyInput {
     font-size: 0.9rem;
   }
 

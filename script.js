@@ -69,13 +69,6 @@ app.displayConvertedInput = (dataFromApi) => {
    // To get the array of country codes
    apiData = dataFromApi.symbols;
    apiData.sort();
-   apiData.splice(38, 1);
-   apiData.splice(35, 2);
-   apiData.splice(32, 1);
-   apiData.splice(30, 1);
-   apiData.splice(21, 3);
-   apiData.splice(9, 1);
-   apiData.splice(6, 1);
 
    //Append to the page
    const convertedDropDown = document.querySelector("#toConvertedInput");
@@ -90,7 +83,6 @@ app.displayConvertedInput = (dataFromApi) => {
 
 // EVENT LISTENER
 app.setupEventListeners = function () {
-
    // Query our convert button
    const convert = document.querySelector(".convertButton");
 
@@ -156,7 +148,7 @@ app.setupEventListeners = function () {
          const dateInput = document.querySelector(".date");
          dateInput.innerHTML = `Date:  ${
             date.getMonth() + 1
-         }-${date.getDate()}-${date.getFullYear()}
+         }/${date.getDate()}/${date.getFullYear()}
             <br>
             Time: ${date.getHours()}:${minutes()}`;
 
@@ -178,14 +170,12 @@ app.setupEventListeners = function () {
          // To clear the input field once submitted
          userInput.value = "";
 
-         // window.scrollBy(0, 200);
-         window.scrollBy({ top: 200, behavior: 'smooth' })
-
+         // Move the scroll down after user clicks the button
+         window.scrollBy({ top: 500, behavior: "smooth" });
       };
       getSecondBase();
    });
 };
-
 
 app.init = () => {
    app.getBase();

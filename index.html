@@ -1,93 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$HOW ME THE MONEY!</title>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>$HOW ME THE MONEY!</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Kaisei+Opti&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Orbitron&display=swap" rel="stylesheet">
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Kaisei+Opti&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Orbitron&display=swap"
+         rel="stylesheet"
+      />
 
-    <!-- ===== Font Awesome ===== -->
-    <script src="https://kit.fontawesome.com/1686cdb2e3.js" crossorigin="anonymous"></script>
-    
-    <!-- Linking style sheet -->
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+      <!-- ===== Font Awesome ===== -->
+      <script
+         src="https://kit.fontawesome.com/1686cdb2e3.js"
+         crossorigin="anonymous"
+      ></script>
 
-    <header>
-        <h1><img src="./assets/dollarsign.gif" class="dollarSign">HOW ME THE MONEY!</h1>
-    </header>
+      <!-- Linking style sheet -->
+      <link rel="stylesheet" href="./styles/style.css" />
+   </head>
+   <body>
+      <header>
+         <h1>
+            <img src="./assets/dollarSign.gif" class="dollarSign" />HOW ME THE
+            MONEY!
+         </h1>
+      </header>
 
-    <main>
-        <section class="conversion">
+      <main>
+         <section class="conversion">
             <div class="wrapper">
-                <form action="#" method="POST" name="currencyForm" class="currencyForm" id="form">
-                    <label for="moneyInput" class="moneyInput">Amount</label>
-                    <input type="number" id="moneyInput" name="moneyInput" placeholder="Enter amount" step="0.01" min="0.01">
-                    <br>
-                    <div class="toAndFrom">
-                        <div class="from">
-                            <label for="baseInput" class="baseInput">From </label>
-                            <select name="baseInput" id="baseInput">
-                            </select>
-                        </div>
-                  
+               <form
+                  action="#"
+                  method="POST"
+                  name="currencyForm"
+                  class="currencyForm"
+                  id="form"
+               >
+                  <label for="moneyInput" class="moneyInput">Amount</label>
+                  <input
+                     type="number"
+                     id="moneyInput"
+                     name="moneyInput"
+                     placeholder="Enter amount"
+                     step="0.01"
+                     min="0.01"
+                  />
+                  <br />
+                  <div class="toAndFrom">
+                     <div class="from">
+                        <label for="baseInput" class="baseInput">From </label>
+                        <select name="baseInput" id="baseInput"></select>
+                     </div>
 
-                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
 
-                        <div class="to">
+                     <div class="to">
+                        <label for="toConvertedInput" class="toConvertedInput"
+                           >To</label
+                        >
+                        <select
+                           name="toConvertedInput"
+                           id="toConvertedInput"
+                        ></select>
+                     </div>
+                  </div>
 
-                            <label for="toConvertedInput" class="toConvertedInput">To</label>
-                            <select name="toConvertedInput" id="toConvertedInput">
-                            </select>
-                        </div>
-                    </div>
-                
-                    <div class="buttons">
-                        <button class="convertButton">Convert</button>
-                    </div>
-                </form>
+                  <div class="buttons">
+                     <button class="convertButton">Convert</button>
+                  </div>
+               </form>
             </div>
-        </section>
+         </section>
 
-        <section class="cheque">
+         <section class="cheque">
             <div class="topOfChq">
-                <h2>SHOW ME THE<br> MONEY! 💰</h2>
-                <h3 class="dateH3"></h3>
-                <p class="date"></p>
+               <h2>
+                  SHOW ME THE<br />
+                  MONEY! 💰
+               </h2>
+               <h3 class="dateH3"></h3>
+               <p class="date"></p>
             </div>
 
             <div class="midOfChq">
-                <h3 class="payTo">Pay to the <br> order of: </h3>
-                <img class="fromFlag" src="" alt="">
-                <h3 class="cadH3"></h3>
-                <p class="cadAmount"></p>
+               <h3 class="payTo">
+                  The currency <br />
+                  conversion:
+               </h3>
+               <img class="fromFlag" src="" alt="" />
+               <h3 class="cadH3"></h3>
+               <p class="cadAmount"></p>
 
-                <h3 class="amount"></h3>
-                <p class="convertedValue"></p>
-                <img class="flag" src="" alt="">
+               <h3 class="amount"></h3>
+               <p class="convertedValue"></p>
+               <img class="flag" src="" alt="" />
             </div>
 
             <div class="bottomOfChq">
-                <h3>Memo: <span>Thank you for using our app!</span></h3>
-                <h3>Signature: <span> Bootcamp Cohort 41</span></h3>
+               <h3>Memo: <span>Thank you for using our app!</span></h3>
+               <h3>Signature: <span> Bootcamp Cohort 41</span></h3>
             </div>
-            
-            <p class="serialNumber"> Serial Number: <span>000 || 000 12345 | 00001 || 0001 23</span></p>
-        </section>
-    </main>
 
-    <footer>
-        <p>Created by Karleen & Joey at <a href="www.junocollege.com">Juno College of Technology</a> 💰</p>
-    </footer>
-    
-    <script src="./script.js"></script>
-</body>
+            <p class="serialNumber">
+               Serial Number: <span>000 || 000 12345 | 00001 || 0001 23</span>
+            </p>
+         </section>
+      </main>
+
+      <footer>
+         <p>
+            Created by Karleen & Joey at
+            <a href="www.junocollege.com">Juno College of Technology</a> 💰
+         </p>
+      </footer>
+
+      <script src="./script.js"></script>
+   </body>
 </html>
-
