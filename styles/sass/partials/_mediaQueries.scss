@@ -18,19 +18,32 @@
 }
 
 @media (max-width: 686px) {
+   .currencyForm {
+      margin-top: 30px;
+   }
    .toAndFrom {
       display: flex;
       flex-direction: column;
    }
+   .midOfChq {
+      display: flex;
+      flex-direction: column;
+      .payTo {
+         align-self: flex-start;
+      }
+      h3 {
+         margin: 0 0;
+      }
+   }
+   input[type=number] {
+      font-size: 0.75rem;
+   }
 }
+
 
 @media (max-width: 480px) {
    h1 {
       font-size: 2.9rem;
-   }
-
-   .currencyForm {
-      margin-top: 30px;
    }
 
    input[type=number] {
