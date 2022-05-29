@@ -48,6 +48,7 @@ section {
 .conversion {
    margin-bottom: 50px;
    text-align: center;
+   box-shadow: 5px 10px 18px $darkGreen;
 }
 
 input[type="number"] {
@@ -107,6 +108,7 @@ button:focus {
    border-radius: 5px;
    border: 3px solid black;
    background-image: linear-gradient(180deg, $darkCream, $cream, white);
+   box-shadow: 5px 10px 18px $darkGreen;
 }
 
 .topOfChq {
@@ -173,14 +175,41 @@ button:focus {
 footer {
    text-align: center;
    color: white;
-   margin-top: 100px;
+   margin-top: 120px;
    padding: 2px;
    background-color: $darkGreen;
    p {
+      font-family: $bodyFont;
       font-size: 0.75rem;
+      letter-spacing: 1px;
    }
    a {
       text-decoration: none;
       color: white;
+   }
+
+   .topFooter {
+      display: flex;
+      justify-content: center;
+      background-color: $lightGreen;
+      margin-top: -1rem;
+   }
+
+   .karleenFooter,
+   .joeyFooter {
+      margin: 20px;
+      p {
+         margin: -1rem;
+         padding: 10px;
+      }
+      .icons {
+         display: flex;
+         justify-content: center;
+         padding-bottom: 0;
+         i {
+            color: white;
+            margin-bottom: 0;
+         }
+      }
    }
 }
