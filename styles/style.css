@@ -456,6 +456,12 @@ button:focus {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.midOfChq .baseH3,
+.midOfChq .baseAmount,
+.midOfChq .amount,
+.midOfChq .convertedValue {
+  font-size: 1.5rem;
+}
 
 .amount {
   margin-left: 10px;
@@ -561,6 +567,29 @@ footer .joeyFooter .icons i {
   .serialNumber span {
     font-size: 0.9rem;
   }
+
+  .midOfChq {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .midOfChq .baseH3,
+.midOfChq .baseAmount,
+.midOfChq .amount,
+.midOfChq .convertedValue {
+    font-size: 1.2rem;
+  }
+  .midOfChq .payTo {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .midOfChq h3 {
+    margin: 0;
+  }
 }
 @media (max-width: 730px) {
   .currencyForm {
@@ -586,23 +615,6 @@ footer .joeyFooter .icons i {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-  }
-
-  .midOfChq {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .midOfChq .payTo {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-  .midOfChq h3 {
-    margin: 0;
   }
 
   input[type=number] {
@@ -632,6 +644,9 @@ footer .joeyFooter .icons i {
   .bottomOfChq h3 {
     margin-top: 20px;
   }
+  .bottomOfChq h3 span {
+    font-size: 0.8rem;
+  }
 
   input[type=number] {
     font-size: 0.8rem;
@@ -649,5 +664,12 @@ footer .joeyFooter .icons i {
 
   button {
     font-size: 1rem;
+  }
+
+  .serialNumber {
+    font-size: 0.7rem;
+  }
+  .serialNumber span {
+    font-size: 0.6rem;
   }
 }

@@ -141,6 +141,12 @@ button:focus {
       letter-spacing: 1px;
       text-transform: uppercase;
    }
+   .baseH3,
+   .baseAmount,
+   .amount,
+   .convertedValue {
+      font-size: 1.5rem;
+   }
 }
 
 .amount {

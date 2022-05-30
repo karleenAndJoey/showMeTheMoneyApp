@@ -13,6 +13,23 @@
    .serialNumber span {
       font-size: 0.9rem;
    }
+
+   .midOfChq {
+      .baseH3,
+      .baseAmount,
+      .amount,
+      .convertedValue {
+         font-size: 1.2rem;
+      }
+      display: flex;
+      flex-direction: column;
+      .payTo {
+         align-self: flex-start;
+      }
+      h3 {
+         margin: 0;
+      }
+   }
 }
 
 @media (max-width: 730px) {
@@ -28,16 +45,7 @@
       flex-direction: column;
       text-align: center;
    }
-   .midOfChq {
-      display: flex;
-      flex-direction: column;
-      .payTo {
-         align-self: flex-start;
-      }
-      h3 {
-         margin: 0;
-      }
-   }
+
    input[type="number"] {
       font-size: 0.75rem;
    }
@@ -62,6 +70,9 @@
 
    .bottomOfChq h3 {
       margin-top: 20px;
+      span {
+         font-size: 0.8rem;
+      }
    }
 
    input[type="number"] {
@@ -80,5 +91,12 @@
 
    button {
       font-size: 1rem;
+   }
+
+   .serialNumber {
+      font-size: 0.7rem;
+      span {
+         font-size: 0.6rem;
+      }
    }
 }

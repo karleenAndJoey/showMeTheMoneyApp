@@ -1,9 +1,7 @@
 // Pseudo Code
 
 // Create the init method, call it at the end
-
 // Add event listener to the “submit” button and create a function that will do the conversion
-
 // Prevent default behaviour once submit button is clicked
 // Take user input and multiply by conversion rate
 // Then append the user input and selected currencies (to and from) to the page
@@ -31,9 +29,12 @@ app.getBase = () => {
 app.getUserInput = document.querySelector("#moneyInput");
 let userInput = app.getUserInput;
 
+// Error handling function if user submits blank or symbols or letters
 app.errorMsg = function () {
    if (!userInput.value) {
       alert("Please enter a numerical value");
+      userInput.value = "";
+      window.scrollBy(0);
    }
 };
 
@@ -42,7 +43,7 @@ let apiData = {};
 
 // This will append the data into our "from" dropdown
 app.displayFromInput = (dataFromApi) => {
-   // To get the array of country codes
+   // To get the array of country codes (removed crypto currencies)
    apiData = dataFromApi.symbols;
    apiData.sort();
    apiData.splice(38, 1);
@@ -86,12 +87,11 @@ app.setupEventListeners = function () {
    // Query our convert button
    const convert = document.querySelector(".convertButton");
 
-   // When user clicks the convert button, we attached an event listener to it and a function that will multiply userinput and convertedRate
+   // When user clicks the convert button, we attached an event listener to it and a function that will multiply userinput and apiSecondData
    convert.addEventListener("click", function (e) {
       e.preventDefault();
 
       const getBaseValue = document.querySelector("#baseInput");
-
       const getConvertedValue = document.querySelector("#toConvertedInput");
 
       let fromRate = getBaseValue.value;
@@ -120,10 +120,10 @@ app.setupEventListeners = function () {
          let total = (userInput.value * apiSecondData).toFixed(2);
 
          // Append the user input amount to the page
-         const cadH3 = document.querySelector(".cadH3");
-         const cadAmount = document.querySelector(".cadAmount");
-         cadAmount.innerHTML = `${userInput.value} ${fromRate} =`;
-         cadH3.append(cadAmount);
+         const baseH3 = document.querySelector(".baseH3");
+         const baseAmount = document.querySelector(".baseAmount");
+         baseAmount.innerHTML = `${userInput.value} ${fromRate} =`;
+         baseH3.append(baseAmount);
 
          // Append the converted total amount to the page
          const amount = document.querySelector(".amount");
@@ -131,11 +131,10 @@ app.setupEventListeners = function () {
          convertedValue.innerHTML = `${total} ${convertedRate} `;
          amount.appendChild(convertedValue);
 
-         // Append the current date to the page
          // Date object
          const date = new Date();
 
-         // a function to fix how the minutes append to the page
+         // A function to fix how the minutes append to the page
          let minutes = function () {
             if (date.getMinutes() < 10) {
                return (minutes = "0" + date.getMinutes());
@@ -144,6 +143,7 @@ app.setupEventListeners = function () {
             }
          };
 
+         // Append the current date to the page
          const dateH3 = document.querySelector(".dateH3");
          const dateInput = document.querySelector(".date");
          dateInput.innerHTML = `Date:  ${
@@ -151,7 +151,6 @@ app.setupEventListeners = function () {
          }/${date.getDate()}/${date.getFullYear()}
             <br>
             Time: ${date.getHours()}:${minutes()}`;
-
          dateH3.append(dateInput);
 
          // Append the From currency flag to the page
@@ -159,7 +158,7 @@ app.setupEventListeners = function () {
          baseFlagImg.src = `./assets/${fromRate}.png`;
          baseFlagImg.alt = `Flag of ${fromRate}`;
 
-         // Append the selected currency flag to the page
+         // Append the To currency flag to the page
          const flagImage = document.querySelector(".flag");
          flagImage.src = `./assets/${convertedRate}.png`;
          flagImage.alt = `Flag of ${convertedRate}`;
