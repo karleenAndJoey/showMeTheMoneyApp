@@ -553,7 +553,6 @@ footer .joeyFooter .icons i {
   input[type=number] {
     font-size: 1rem;
   }
-
   .bottomOfChq {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -563,11 +562,9 @@ footer .joeyFooter .icons i {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-
   .serialNumber span {
     font-size: 0.9rem;
   }
-
   .midOfChq {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -595,7 +592,6 @@ footer .joeyFooter .icons i {
   .currencyForm {
     margin-top: 30px;
   }
-
   .toAndFrom {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -605,7 +601,6 @@ footer .joeyFooter .icons i {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-
   .topOfChq {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -616,20 +611,30 @@ footer .joeyFooter .icons i {
             flex-direction: column;
     text-align: center;
   }
-
   input[type=number] {
     font-size: 0.75rem;
   }
 }
 @media (max-width: 480px) {
   h1 {
-    font-size: 2.9rem;
+    font-size: 2.4rem;
   }
-
+  .dollarSign {
+    width: 60px;
+    height: 100px;
+  }
+  section {
+    width: 85%;
+  }
+  .midOfChq .payTo {
+    text-align: center;
+    margin-right: 0;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
   input[type=number] {
     width: 85%;
   }
-
   .midOfChq {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -640,32 +645,26 @@ footer .joeyFooter .icons i {
   .midOfChq h3 {
     margin: 0;
   }
-
   .bottomOfChq h3 {
     margin-top: 20px;
   }
   .bottomOfChq h3 span {
     font-size: 0.8rem;
   }
-
   input[type=number] {
     font-size: 0.8rem;
   }
-
   .baseInput,
 .toConvertedInput,
 .moneyInput {
     font-size: 0.9rem;
   }
-
   select {
     font-size: 0.9rem;
   }
-
   button {
     font-size: 1rem;
   }
-
   .serialNumber {
     font-size: 0.7rem;
   }

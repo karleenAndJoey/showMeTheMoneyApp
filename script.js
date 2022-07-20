@@ -1,30 +1,24 @@
-// Pseudo Code
 
-// Create the init method, call it at the end
-// Add event listener to the “submit” button and create a function that will do the conversion
-// Prevent default behaviour once submit button is clicked
-// Take user input and multiply by conversion rate
-// Then append the user input and selected currencies (to and from) to the page
-// Also append the flag images of selected currencies (both from and to)
 
 // Create an app object using namespacing
 const app = {};
 
 // Initialize preset data in the dedicated properties
-app.endpoint = `https://morning-coast-00478.herokuapp.com/https://www.currency-api.com/symbols`;
+// app.endpoint = `https://morning-coast-00478.herokuapp.com/https://www.currency-api.com/symbols`;
 
-app.getBase = () => {
-   const currencyUrl = new URL(app.endpoint);
+// app.getBase = () => {
+//    const currencyUrl = new URL(app.endpoint);
 
-   fetch(currencyUrl)
-      .then((response) => response.json())
-      .then((jsonData) => {
-         app.displayFromInput(jsonData);
-         app.displayConvertedInput(jsonData);
-      });
-};
-
+//    fetch(currencyUrl)
+//       .then((response) => response.json())
+//       .then((jsonData) => {
+//          app.displayFromInput(jsonData);
+//          app.displayConvertedInput(jsonData);
+//       });
+// };
 // Create a construction method that will fetch Currency API data and store them in a variable
+
+
 // Store input value in a variable
 app.getUserInput = document.querySelector("#moneyInput");
 let userInput = app.getUserInput;
@@ -42,52 +36,51 @@ app.errorMsg = function () {
 let apiData = {};
 
 // This will append the data into our "from" dropdown
-app.displayFromInput = (dataFromApi) => {
+// app.displayFromInput = (dataFromApi) => {
    // To get the array of country codes (removed crypto currencies)
-   apiData = dataFromApi.symbols;
-   apiData.sort();
-   apiData.splice(38, 1);
-   apiData.splice(35, 2);
-   apiData.splice(32, 1);
-   apiData.splice(30, 1);
-   apiData.splice(21, 3);
-   apiData.splice(9, 1);
-   apiData.splice(6, 1);
+   // apiData = dataFromApi.symbols;
+   // apiData.sort();
+   // apiData.splice(38, 1);
+   // apiData.splice(35, 2);
+   // apiData.splice(32, 1);
+   // apiData.splice(30, 1);
+   // apiData.splice(21, 3);
+   // apiData.splice(9, 1);
+   // apiData.splice(6, 1);
 
    //Append to the page
-   const fromDropDown = document.querySelector("#baseInput");
+//    const fromDropDown = document.querySelector("#baseInput");
 
-   apiData.forEach((individualRate) => {
-      const options = document.createElement("option");
-      options.value = individualRate;
-      options.innerHTML = individualRate;
-      fromDropDown.appendChild(options);
-   });
-};
+//    apiData.forEach((individualRate) => {
+//       const options = document.createElement("option");
+//       options.value = individualRate;
+//       options.innerHTML = individualRate;
+//       fromDropDown.appendChild(options);
+//    });
+// };
 
-// This will append the data into our "to" dropdown
-app.displayConvertedInput = (dataFromApi) => {
-   // To get the array of country codes
-   apiData = dataFromApi.symbols;
-   apiData.sort();
+// // This will append the data into our "to" dropdown
+// app.displayConvertedInput = (dataFromApi) => {
+//    // To get the array of country codes
+//    apiData = dataFromApi.symbols;
+//    apiData.sort();
 
-   //Append to the page
-   const convertedDropDown = document.querySelector("#toConvertedInput");
+//    //Append to the page
+//    const convertedDropDown = document.querySelector("#toConvertedInput");
 
-   apiData.forEach((individualRate) => {
-      const options = document.createElement("option");
-      options.value = individualRate;
-      options.innerHTML = individualRate;
-      convertedDropDown.appendChild(options);
-   });
-};
+//    apiData.forEach((individualRate) => {
+//       const options = document.createElement("option");
+//       options.value = individualRate;
+//       options.innerHTML = individualRate;
+//       convertedDropDown.appendChild(options);
+//    });
+// };
 
 // EVENT LISTENER
 app.setupEventListeners = function () {
    // Query our convert button
    const convert = document.querySelector(".convertButton");
 
-   // When user clicks the convert button, we attached an event listener to it and a function that will multiply userinput and apiSecondData
    convert.addEventListener("click", function (e) {
       e.preventDefault();
 
@@ -177,7 +170,7 @@ app.setupEventListeners = function () {
 };
 
 app.init = () => {
-   app.getBase();
+   // app.getBase();
    app.setupEventListeners();
 };
 

@@ -53,7 +53,22 @@
 
 @media (max-width: 480px) {
    h1 {
-      font-size: 2.9rem;
+      font-size: 2.4rem;
+   }
+
+   .dollarSign {
+      width: 60px;
+      height: 100px;
+   }
+   
+   section {
+      width: 85%;
+   }
+
+   .midOfChq .payTo {
+      text-align: center;
+      margin-right: 0;
+      align-self: center;
    }
 
    input[type="number"] {
