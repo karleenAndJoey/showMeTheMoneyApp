@@ -1,5 +1,3 @@
-
-
 // Create an app object using namespacing
 const app = {};
 
@@ -33,7 +31,7 @@ app.errorMsg = function () {
 };
 
 // Create an object that will later store a value that we can access
-let apiData = {};
+// let apiData = {};
 
 // This will append the data into our "from" dropdown
 // app.displayFromInput = (dataFromApi) => {
@@ -105,8 +103,6 @@ app.setupEventListeners = function () {
 
       //Store the conversion rate in a variable
       conversionRate = (conversionData) => {
-         // Create an object that will store our conversion rate value
-         let apiSecondData = {};
 
          apiSecondData = conversionData.conversion_rate;
 

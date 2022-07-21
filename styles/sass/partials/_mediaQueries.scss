@@ -32,7 +32,18 @@
    }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 810px) {
+
+   section {
+      width: 85%;
+   }
+
+   .midOfChq .payTo {
+      text-align: center;
+      margin-right: 0;
+      align-self: center;
+   }
+
    .currencyForm {
       margin-top: 30px;
    }
@@ -59,16 +70,6 @@
    .dollarSign {
       width: 60px;
       height: 100px;
-   }
-   
-   section {
-      width: 85%;
-   }
-
-   .midOfChq .payTo {
-      text-align: center;
-      margin-right: 0;
-      align-self: center;
    }
 
    input[type="number"] {
