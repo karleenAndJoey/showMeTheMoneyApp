@@ -89,7 +89,7 @@ app.setupEventListeners = function () {
       let convertedRate = getConvertedValue.value;
 
       // Fetch request to get the conversion paired rate
-      secondEndpoint = `https://morning-coast-00478.herokuapp.com/https://v6.exchangerate-api.com/v6/1779a7b8e62507dacf3be946/pair/${fromRate}/${convertedRate}`;
+      secondEndpoint = `https://proxy-ugwolsldnq-uc.a.run.app/https://v6.exchangerate-api.com/v6/1779a7b8e62507dacf3be946/pair/${fromRate}/${convertedRate}`;
 
       getSecondBase = () => {
          const secondCurrencyUrl = new URL(secondEndpoint);
